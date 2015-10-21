@@ -29,6 +29,10 @@ doing this assignment); but be prepared to discuss. The goal for Monday's class
 will be to feel confident about your project, thanks to the work you've done
 for this assignment and the feedback you'll get in class.
 
+**Note:** If you plan to work with someone on the project, each of you should 
+write up your own, independent pitch. This will be the last project assignment
+you'll do on your own (other than the notebook).
+
 ## Grading
 Good responses (i.e., responses that receive a 3) will:
 
