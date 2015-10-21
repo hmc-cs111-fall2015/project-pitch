@@ -23,6 +23,12 @@ material from a project idea, if there's some overlap. But be sure to also
 address my comments and the comments of anyone else to whom you haven't yet had
 a chance to respond.
 
+**Additionally, be prepared to talk about your project in class on Monday,
+October 26.** There's nothing to prepare for this discussion (other than
+doing this assignment); but be prepared to discuss. The goal for Monday's class
+will be to feel confident about your project, thanks to the work you've done
+for this assignment and the feedback you'll get in class.
+
 ## Grading
 Good responses (i.e., responses that receive a 3) will:
 
