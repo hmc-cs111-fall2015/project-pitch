@@ -28,10 +28,10 @@ interested in creating constructions. While sometimes they understand what they
 are creating, often times they are creating the idea as they make the drawing.
 
 It is also worth noting that while frequently users want these constructions
-rendered into drawings, the objects they are describing are geometric in nature
-- not inherently graphical. This means that sometimes geometrically distinct
-ideas may be spatially close. If input is spatial then this can result in
-geometric imprecision. For example, consider drawing a line from a triangle
+rendered into drawings, the objects they are describing are geometric in
+nature - not inherently graphical. This means that sometimes geometrically
+distinct ideas may be spatially close. If input is spatial then this can result
+in geometric imprecision. For example, consider drawing a line from a triangle
 vertex to the midpoint of the opposing side vs bisecting that angle. Often
 these two actions are spatially similar (the lines end up close to each other).
 
@@ -57,7 +57,8 @@ Line from A to C
 Bisect Angle C A B
 ```
 
-then there is a language write there with all of the nouns and verbs we expect.
+then there is a language writen there with all of the nouns and verbs we
+expect.
 
 But there is also more. Under the hood, the system must have some sort of idea
 of how to represent these geometric ideas. A common form from which the
