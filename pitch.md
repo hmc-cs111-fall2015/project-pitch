@@ -82,15 +82,17 @@ the **language** aspects of this project (e.g., making language design
 decisions), as opposed to "systems" aspects of the project (e.g., implementing a
 complicated semantics that doesn't require a lot of language design)?_
 
+It seems that trying to invent ways for the user to specify how they want to build the map in an intuitive way should involve more language design decisions. There will be semantics decisions, of course, but trying to add in as much implementation as possible should draw out the language aspects of this project.
 
 ### Scope
 _How big an idea is this? How ambitious is this project?_
 
+Since I'll be focusing first and foremost on the text-based implementation, and the UI may or may not be implemented, this shouldn't be too ambitious.
 
 ### Challenges and opportunities
 _Why is this a good project? What are some challenges you expect to face? How
 might you overcome them? What are some warning signs that the project has gotten
 off track, and how will you get the project back on track if needed?_
 
-
-
+The biggest problem to solve is finding the most intuitive way to let the user specify a coordinate system. Perhaps users may also be allowed to specify relative placement, placing certain tiles above, below, to the right of, and to the left of other tiles.
+Another possibility is to allow for ambiguity; the user could specify a general area to place things, or somewhere to fill in with a pattern tile even if they don't fit perfectly (for example, tiling a 17x24 area with 5x5 tiles).
