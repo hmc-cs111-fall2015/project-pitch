@@ -22,9 +22,6 @@ so there are many limits that will be discussed later.
 
 
 ### What's the need?
-_What need is met by your idea? Who are you helping? What is that person's
-experience like now? What would their experience be like if you could help 
-them?_
 
 The big need I see is that with current languages, extensibility ends at
 compile-time features. That is not completely true: again, it is _possible_
@@ -63,12 +60,20 @@ would be helpful in learning-through-implementing those ideas.
 
 
 ### Interface (syntax)
-_How might the user interact with the language? What does programming look 
-like? Why is this the right way to interact with the problem domain? Be careful
-to distinguish between, e.g,. a graphical interface and a linguistic interface._ 
 
 The interface is entirely linguistic. You write some code, and you compile it.
-However, what happens during compilation will also be a part of your code.
+However, what happens during compilation will also be a part of your code. In some sense,
+errors would happen in "layers" - perhaps not by design, but by reality - in the way that
+there would probably end up being layers to what happens during compilation. (First some mutations,
+then basic type checking, then some kind of verification thing, etc.) So, it would be especially
+important that errors know their source. Specifically, an error that pops up after an AST mutation
+would need to reference the mutation, as well as the original code that was mutated.
+After that, it just needs to be straightforward for people who write compile-time behavior to
+also write error messages.
+
+(You know, that's another thing that might be good. Depending on how much compile-time behavior
+can be coded in, you could have people make variant implementations of things that just had better error
+messages... that's a rare kind of extensibility.)
 
 One interesting point is that, as is often the case for languages with powerful compile-time 
 capabilities, the errors you inevitably get during compilation are not meant just
