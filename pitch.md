@@ -136,6 +136,22 @@ aren't and conjecture why not. If so, describe them and provide links. How well
 do they address the need? Are there any particularly admirable qualities of the
 language? Are there parts of the language you think could be improved?_
 
+The first DSL in the domain that I found goes by [code2flow]
+and is designed to make flowchart creation easy;
+however, the language doesn't suit my ideal well
+because it's not embedded in an established language&mdash;though
+the syntax resembles Java/C++. Another language that is actually
+very on par with my idea is [Flowgen]&mdash;it's on GitHub,
+and it's even associated with a [paper][Flowgen Paper]!
+Flowgen works for C++ and addresses the need pretty well.
+For the most part, I appreciate the syntax (It uses comments!),
+but, it's not finished (perhaps an opportunity),
+the flowcharts aren't very pretty, I don't like how it does subroutine-linking
+(expansion in place as opposed to opening a separte flowchart),
+and I'm currently of the opinion that the language should be opt-in oriented,
+but Flowgen includes _every_ `if` statement (and `for` loop) in flowcharts,
+which causes the underling language's syntax to leak into the flowchart
+if users do not provide a more human-readable description for the condition.
 
 ## The Project
 This section examines whether the idea makes for a good CS 111 project.
@@ -151,11 +167,16 @@ complicated semantics that doesn't require a lot of language design)?_
 ### Scope
 _How big an idea is this? How ambitious is this project?_
 
+I think the idea has potential to grow, but I think one could successfully see multiple meaningful iterations
++before the semester's end.
 
 ### Challenges and opportunities
 _Why is this a good project? What are some challenges you expect to face? How
 might you overcome them? What are some warning signs that the project has gotten
 off track, and how will you get the project back on track if needed?_
 
+[code2flow]: http://code2flow.com/
 [Doxygen]: https://en.wikipedia.org/wiki/Doxygen
 [Flowgen]: http://jlopezvi.github.io/Flowgen/index.html
+[Flowgen Paper]: http://arxiv.org/pdf/1405.3240.pdf
+[Javadoc]: https://en.wikipedia.org/wiki/Javadoc
