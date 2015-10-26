@@ -26,7 +26,7 @@ so there are many limits that will be discussed later.
 The big need I see is that with current languages, extensibility ends at
 compile-time features. That is not completely true: again, it is _possible_
 to develop a lot of functionality by leveraging what already exists,
-especially when you get into the realm of .  
+especially when you get into the realm of macros.  
 And Haskell encourages modifications to the compiler, such that something
 like Idris (which has dependent types) can be built off of it, which is also
 pretty successful. Even so, these are not particularly friendly.
