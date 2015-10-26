@@ -42,7 +42,7 @@ to generate complete flowcharts that express the entirety of the intended algori
 ### Why a language?
 _Why is a DSL appropriate for your user(s)? How does it address the need?_
 
-1. The programmer will likely not want every implementation detail
+1. The programmer might not want every implementation detail
 to leak into the flowcharts, so there should be some way to indicate
 what _should_ appear on the flowcharts.
 
@@ -163,17 +163,35 @@ the **language** aspects of this project (e.g., making language design
 decisions), as opposed to "systems" aspects of the project (e.g., implementing a
 complicated semantics that doesn't require a lot of language design)?_
 
+If you include the time I've already spent considering language aspects,
+I'd say about 20-30% of my time will be spent engaging in these aspects.
+There still remains syntax and philosophy to solidify,
+and I don't expect the implementation to be terribly difficult.
 
 ### Scope
 _How big an idea is this? How ambitious is this project?_
 
-I think the idea has potential to grow, but I think one could successfully see multiple meaningful iterations
-+before the semester's end.
+I think the idea is a healthy size and still has potential to grow.
+Most importantly, I don't think it will be tough to successfully see
+multiple meaningful iterations of the language before the semester's end.
 
 ### Challenges and opportunities
 _Why is this a good project? What are some challenges you expect to face? How
 might you overcome them? What are some warning signs that the project has gotten
 off track, and how will you get the project back on track if needed?_
+
+This project is good because I'm invested in the product,
+and I think it could cover a range of topics, including meta-programming
+and cross-file parsing. The most difficult thing I can currently think of
+is cross-file parsing, but that seems common enough that there's probably
+plenty of supporting materials for performing it. As far as the project
+getting off track, I think it's most likely that the project will get off track
+in terms of my consideration for language aspects. I think it will be easy
+for me to focus on style, efficiency, and flowchart aesthetic,
+so if I notice that I'm spending a lot of time on these things,
+I should instead get to a place where the language is stable,
+and continue thinking about how I can extend the language for the user,
+which will probably result in a greater return on utility for the user.
 
 [code2flow]: http://code2flow.com/
 [Doxygen]: https://en.wikipedia.org/wiki/Doxygen
