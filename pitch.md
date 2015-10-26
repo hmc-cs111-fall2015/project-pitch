@@ -147,10 +147,19 @@ _What might happen when a program runs? How does a program interact with the
 user? What kinds of semantic (i.e., non-syntax) errors might occur, and how 
 might they be communicated to the user?_
 
-The internal representation should do two things during runtime.
+The internal representation should do three things during runtime.
 
 The first of these is consistency-checking. One could imagine syntactically
 correct statements about geometry which are not actually possible.
+
+The second of these is providing a usable representation of the geometric
+structure. This would be a way of communicating what has been drawn to some
+other system (Ex: the LaTeX rendering system).
+
+The third of these is providing a useful suggestion API. There should be some
+way of asking what actions could be performed next given the set of actions
+that have been performed so far and the set of macros / constructions which
+have been defined so far (/ are in scope?)
 
 ### Expressiveness
 _What should be easy to do in this language? What should be possible, but
