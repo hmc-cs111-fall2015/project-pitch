@@ -41,25 +41,25 @@ The user interacts through text queries. The programming will look similar to ot
 
 This would ideally return a confirmation or an error.
 
-"""
+```
 CREATE ROOM "Blue Room" IN "Platt"
-"""
+```
 
 * Reserve spaces
 
 This would ideally return either a confirmation or an error.
 
-"""
+```
 RESERVE ROOM "Blue Room" FROM "1600" TO "2030" ON "11/28/2015"
-"""
+```
 
 * Query for availability
 
 This would ideally return a list of reservations on that day, or a list of available times.
 
-"""
+```
 CHECK ROOMS IN "Platt" ON "11/28/2015"
-"""
+```
 
 ### Operation (semantics)
 _What might happen when a program runs? How does a program interact with the
