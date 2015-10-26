@@ -1,8 +1,10 @@
-# Project Title (replace me)
+# CAOS
 
 ## Overview
-_What's this project about, briefly?_
-
+CAOS is a language that (will be) designed to assist (primarily student) organic
+chemists.  It will do so by allowing the simple representation of molecules, as
+well as loading various common existing representations of molecules and predicting
+how they will react.
 
 ## The user and a language
 This section describes who the project would serve and why a language might be a
@@ -10,23 +12,66 @@ good way to meet their needs.
 
 
 ### What's the need?
-_What need is met by your idea? Who are you helping? What is that person's
-experience like now? What would their experience be like if you could help 
-them?_
-
+Currently chemists must do this by hand or use relatively limited commercial 
+software.  By developing an open source and free alternative, it allows 
+technically minded chemists to more easily predict reactions they need.
 
 ### Why a language?
-_Why is a DSL appropriate for your user(s)? How does it address the need?_
-
+The language of chemical formulas and reactions is already essentially a DSL - 
+this would just provide the computational ability to actually run and test a
+reaction.
 
 ### Why you?
-_What excites you about this idea? How did you come up with it?_
-
+I've been playing around with this sort of idea for a long time, and have taken
+a couple of stabs at it in the past.  I took organic chemistry and thought that
+it shouldn't have to be as hard as it was to predict reactions.
 
 ### Interface (syntax)
-_How might the user interact with the language? What does programming look 
-like? Why is this the right way to interact with the problem domain? Be careful
-to distinguish between, e.g,. a graphical interface and a linguistic interface._ 
+Ideally it should be possible to interact with a GUI, an external DSL, and an 
+internal DSL (matching the technical needs and abilities of the users), however
+I expect that for 111 I'll be implementing either an internal or external DSL.
+
+A typical program would likely look something like:
+
+```
+reactants = load_molecules("path/to/file.cml", format="cml")
+conditions = make_conditions(pka=-1.7, temperature=-73, scale=TempEnum.Centigrade)
+products = react(reactants, conditions)
+```
+
+Conceivably you could also hint what type of reaction you think it should do, like this
+
+```
+products = react(reactants, conditions, type_hint='E1')
+```
+
+Or try to work your way backwards from a product molecule to it's source using recursion
+
+```
+starting_material = retro_synthesis(products, final_conditions, max_steps=50)
+```
+
+This is the correct way to work with it (in terms of an internal-ish DSL) because the
+concepts lend themselves well to existing programming language features such as
+imperative programming and recursion. 
+
+Additionally, it should be possible to extend the language relatively easily. Simply
+define a new reaction type and then register it with the program (this is all 
+theoretical at this point)
+
+```
+@register_reaction(mechanism_name("Diels-Alder"))
+@reaction_constraints('acidic', 'temp>70C', ...)
+def diels_alder_reaction(products, conditions):
+    ...
+```
+
+(Note that those constraints aren't at all the real constraints for a Diels-Alder
+reaction, but existed merely to exemplify what sort of things could be used here).
+
+The language would provide decorators (here I used Python, but this is by no means
+required) and some form of multiple dispath to process arguments given to `react`
+and then try to find the best fitting reaction.
 
 
 ### Operation (semantics)
