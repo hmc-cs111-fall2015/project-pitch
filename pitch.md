@@ -1,4 +1,4 @@
-# CaffeineScript
+# BarScript
 
 ## Overview
 _What's this project about, briefly?_
