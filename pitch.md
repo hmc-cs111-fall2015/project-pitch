@@ -38,13 +38,15 @@ to distinguish between, e.g,. a graphical interface and a linguistic interface._
 
 This is mostly described above. A program is just lines of code. The specifics haven't been worked out yet, but specifying tile objects might look something like:
 
-```tile water1 = SRCPATH <br>
-tile ground1 = SRCPATH { <br>
-	edge = SRCPATH <br>
-} <br>
-freeform tile peninsula = SRCPATH { <br>
-	anchor = (5,5) <br>
-}```
+```
+tile water1 = SRCPATH 
+tile ground1 = SRCPATH {
+	edge = SRCPATH
+}
+freeform tile peninsula = SRCPATH {
+	anchor = (5,5)
+}
+```
 
 
 ### Operation (semantics)
