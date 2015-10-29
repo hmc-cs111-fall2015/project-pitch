@@ -1,4 +1,4 @@
-# Project Title (replace me)
+# FreeTyle
 
 ## Overview
 _What's this project about, briefly?_
